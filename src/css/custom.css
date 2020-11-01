@@ -7173,20 +7173,33 @@ a.text-dark:hover, a.text-dark:focus {
 .navbar button {
   color: #d3d1d1; }
 
+#header-container {
+  border: none;
+  border-radius: 0;
+  background-color: #B7B7B7; }
+  #header-container .card-img-top {
+    max-height: 17rem;
+    min-height: 7rem;
+    border: none;
+    border-radius: 0; }
+
 .jumbotron {
-  background-color: #373a40; }
+  background-color: #686d76;
+  background: url("../assets/img/header-3.jpg") #373a40;
+  background-size: cover;
+  background-blend-mode: overlay; }
 
 #cards-container {
-  background-color: #686d76; }
+  background-color: #373a40; }
   #cards-container .card, #cards-container .card-img, #cards-container .card-img-bottom {
-    background-color: #686d76;
+    background-color: #373a40;
     border: none;
     border-radius: 0; }
 
 #contact-carous-container {
-  background-color: #373a40; }
+  background-color: #686d76; }
   #contact-carous-container .card, #contact-carous-container .carousel {
     border: none;
     border-radius: 0; }
   #contact-carous-container .card {
-    background-color: #373a40; }
+    background-color: #686d76; }
