@@ -1,0 +1,69 @@
+//variable overrides
+$dark-5: #2c2c2c;
+$dark-4: #373a40;
+$dark-3: #686d76;
+$dark-2: #99a8b2;
+$dark-1: #d3d1d1;
+
+$body-bg: $dark-5;
+$body-color: $dark-1;
+$primary: $body-color;
+$success: $dark-2;
+
+/*$primary: #2c2c2c;
+$secondary: #abacad;
+$light: #d3d1d1;
+$dark: #373a40; 
+$body-bg: $primary;
+$body-color: $light;*/
+
+//import Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+//import other custom scss files
+@import "./customvariables";
+//@import "./typography";
+
+//define custom scss styles as usual
+/*body {
+    background-color: $body-bg;
+    color: $body-color;
+    font-family: $font-normal;
+}*/
+
+.navbar {
+    background-color: $dark-4;
+}
+.navbar button{
+    color: $primary;
+}
+
+.jumbotron {
+    background-color: $dark-4;
+}
+
+#cards-container {
+    background-color: $dark-3;
+
+    .card, .card-img, .card-img-bottom {
+        background-color: $dark-3;
+        border: none;
+        border-radius: 0;
+    }
+}
+
+#contact-carous-container {
+    background-color: $dark-4;
+
+    .card, .carousel {
+        border: none;
+        border-radius: 0;
+    }
+
+    .card {
+        background-color: $dark-4;
+    }
+}
+
+
+
