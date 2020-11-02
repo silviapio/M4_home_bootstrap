@@ -7178,10 +7178,22 @@ a.text-dark:hover, a.text-dark:focus {
   border-radius: 0;
   background-color: #B7B7B7; }
   #header-container .card-img-top {
-    max-height: 17rem;
+    max-height: 22rem;
     min-height: 7rem;
     border: none;
     border-radius: 0; }
+  #header-container .card-body {
+    background-image: linear-gradient(#B7B7B7, #686d76, #373a40); }
+
+#sm-header-body {
+  display: none; }
+  @media (min-width: 576px) {
+    #sm-header-body {
+      display: block; } }
+
+@media (min-width: 576px) {
+  #xs-header-body {
+    display: none; } }
 
 .jumbotron {
   background-color: #686d76;

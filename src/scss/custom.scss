@@ -44,11 +44,29 @@ $body-color: $light;*/
     background-color: $gray-bg-header;
 
     & .card-img-top {
-        max-height: 17rem;
+        max-height: 22rem;
         min-height: 7rem;
         border: none;
         border-radius: 0;
-    } 
+    }
+    
+    & .card-body {
+        background-image: linear-gradient($gray-bg-header, $dark-3, $dark-4);
+    }
+}
+
+#sm-header-body {
+    display: none;
+
+    @include media-breakpoint-up(sm) {
+        display: block;
+    }
+}
+
+#xs-header-body {
+    @include media-breakpoint-up(sm) {
+        display: none;
+    }
 }
 
 .jumbotron {
