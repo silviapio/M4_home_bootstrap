@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Gochi+Hand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Trispace:wght@300;400;500&display=swap" rel="stylesheet">
 
   <!-- Font awesome-->
   <script src="https://kit.fontawesome.com/d3efba6e8a.js" crossorigin="anonymous"></script>
@@ -41,36 +41,28 @@
     </nav>
     <header>
       <div class="card" id="header-container">
-        <div class="flex-column">
           <img class="card-img-top" src="./assets/img/header-3.jpg" alt="Card image cap">
-          <div class="card-img-overlay" id="sm-header-body">
-            <h5 class="card-title">Card title</h5>
+          <div class="card-img-overlay" id="md-header-body">
+            <h1 class="card-title">Why this webpage?</h1>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit odio, tenetur tempora eum ad voluptate, possimus exercitationem iure laboriosam quasi, quaerat neque veritatis fugiat asperiores itaque alias quidem eligendi nulla?</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div> <!-- close card body -->
-          <div class="card-body" id="xs-header-body">
-            <h5 class="card-title">Card title</h5>
+          <div class="card-body" id="sm-header-body">
+            <h4 class="card-title">Why this webpage?</h4>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit odio, tenetur tempora eum ad voluptate, possimus exercitationem iure laboriosam quasi, quaerat neque veritatis fugiat asperiores itaque alias quidem eligendi nulla?</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
-        </div> <!-- close card content container -->
       </div> <!-- close #header-container-->
-      <!--<div class="jumbotron jumbotron-fluid py-2 my-0">
-        <div class="container">
-          <h1 class="display-4">Why this webpage</h1>
-          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates saepe perferendis modi ex corrupti debitis odit tempore earum, necessitatibus beatae fugiat accusantium corporis magni adipisci officia! Necessitatibus explicabo sequi porro.</p>
-        </div>
-      </div> close jumbotron --> 
     </header>
     
     <div class="container-fluid pt-2 pb-3" id="cards-container">
       <div class="row justify-content-center">
-        <div class="col-lg-4 p-2"> <!-- column containing card1 -->
+        <div class="col-lg-4"> <!-- column containing card1 -->
           <div class="card"> <!-- card1 -->
             <div class="row flex-sm-row flex-lg-column"> <!-- responsive: @sm flex-row, @lg flex-column -->
-              <div class="card-body col-sm-5 col-lg-12"> <!-- responsive: @sm body and img are in a row (body:5 / img: 7), @lg they are stacked -->
+              <div class="card-body pt-0 col-sm-5 col-lg-12"> <!-- responsive: @sm body and img are in a row (body:5 / img: 7), @lg they are stacked -->
+                <h3 class="card-title">Editing</h3>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                   card's content.</p>
+                <button type="button" class="btn btn-outline-light btn-sm">Learn more...</button>
               </div> <!-- close card body -->
               <div class="col-sm-7 col-lg-12"> <!-- responsive img -->
                 <img src="./assets/img/editing.jpg" class="card-img-bottom" alt="editing-img">
@@ -78,12 +70,14 @@
             </div> <!-- close row for card1 content -->
           </div> <!-- close card1 -->
         </div> <!-- close column containing card1-->
-        <div class="col-lg-4 p-2"> <!-- column containing card2 -->
+        <div class="col-lg-4"> <!-- column containing card2 -->
           <div class="card"> <!-- card2 -->
             <div class="row flex-sm-row flex-lg-column">
-              <div class="card-body col-sm-5 col-lg-12">
+              <div class="card-body pt-0 col-sm-5 col-lg-12">
+                <h3 class="card-title">Blog</h3>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                   card's content.</p>
+                <button type="button" class="btn btn-outline-light btn-sm">Learn more...</button>
               </div>
               <div class="col-sm-7 col-lg-12">
                 <img src="./assets/img/blog.jpg" class="card-img-bottom" alt="blog-img">
@@ -91,12 +85,14 @@
             </div>
           </div> <!-- close card2 -->
         </div> <!-- close column containing card2 -->
-        <div class="col-lg-4 p-2"> <!-- column containing card3 -->
+        <div class="col-lg-4"> <!-- column containing card3 -->
           <div class="card"> <!-- card3 -->
             <div class="row flex-sm-row flex-lg-column">
-              <div class="card-body col-sm-5 col-lg-12">
+              <div class="card-body pt-0 col-sm-5 col-lg-12">
+                <h3 class="card-title">FAQ</h3>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                   card's content.</p>
+                <button type="button" class="btn btn-outline-light btn-sm">Learn more...</button>
               </div>
               <div class="col-sm-7 col-lg-12">
                 <img src="./assets/img/faq.jpg" class="card-img-bottom" alt="faq-img">
@@ -106,23 +102,61 @@
         </div> <!-- close column containing card3 -->
       </div> <!-- close row for cards -->
     </div> <!-- close #cards-container -->
-    <div class="container-fluid py-3" id="contact-carous-container"> <!-- container for contact card and carousel -->
+
+    <div class="container-fluid py-1 px-0" id="contact-carous-container"> <!-- container for contact card and carousel -->
       <div class="row no-gutters"> <!-- row for horizontal alignment @lg viewports -->
-        
-        <div class="col-lg-6 pr-1"> <!-- carousel -->
+        <div class="col-lg-6 pr-1"> <!-- contact card -->
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Contact</h3>
+              <p class="card-text lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit, placeat. Eaque non aliquid ab reiciendis culpa. A tempore molestiae est.</p>
+              <ul class="pl-1">
+                <li>
+                  <a href="#">email@email.com <i class="fas fa-at"></i></a>
+                </li>
+                <li>
+                  <a href="#">FB_account <i class="fab fa-facebook-square"></i>
+                </li>
+                <li>
+                  <a href="#">instagram_user <i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#">GitHub_account <i class="fab fa-github"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> <!-- close contact card -->
+        <div class="col-lg-6"> <!-- carousel -->
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="./assets/carousel/1.jpg" class="d-block w-100" alt="slide1">
+                <div class="carousel-caption d-block">
+                  <h6>Latest blog entry title</h6>
+                  <p class="small">Updated 3 days ago</p>
+                </div>
               </div>
               <div class="carousel-item">
                 <img src="./assets/carousel/2.jpg" class="d-block w-100" alt="slide2">
+                <div class="carousel-caption d-block">
+                  <h6>Important blog entry title</h6>
+                  <p class="small">Updated 15 days ago</p>
+                </div>
               </div>
               <div class="carousel-item">
                 <img src="./assets/carousel/3.jpg" class="d-block w-100" alt="slide3">
+                <div class="carousel-caption d-block">
+                  <h6>Another blog entry title</h6>
+                  <p class="small">Updated 25 days ago</p>
+                </div>
               </div>
               <div class="carousel-item">
                 <img src="./assets/carousel/4.jpg" class="d-block w-100" alt="slide4">
+                <div class="carousel-caption d-block">
+                  <h6>Last blog entry title</h6>
+                  <p class="small">Updated 25 days ago</p>
+                </div>
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -135,25 +169,14 @@
             </a>
           </div>
         </div> <!-- close carousel -->
-        <div class="col-lg-6 pl-1"> <!-- contact card -->
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div> <!-- close contact card -->
       </div> <!-- close row -->
     </div> <!-- close #contact-carous-container -->
   </div> <!-- close initial container-fluid -->
-  <footer class="footer mt-5">
+  <footer class="footer mt-0">
     <nav class="nav justify-content-center">
-      <a class="nav-link active" href="#">Active</a>
-      <a class="nav-link" href="#">Link</a>
-      <a class="nav-link" href="#">Link</a>
-      <a class="nav-link disabled" href="#">Disabled</a>
+      <a class="nav-link" href="#"><i class="fab fa-creative-commons"></i> cc license</a>
+      <a class="nav-link" href="#">privacy</a>
+      <a class="nav-link" href="#">cookies</a>
     </nav>
   </footer>
 

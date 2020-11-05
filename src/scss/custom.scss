@@ -22,7 +22,8 @@ $body-color: $light;*/
 
 //import other custom scss files
 @import "./customvariables";
-//@import "./typography";
+@import "./mixins";
+@import "./typography"; 
 
 //define custom scss styles as usual
 /*body {
@@ -31,11 +32,28 @@ $body-color: $light;*/
     font-family: $font-normal;
 }*/
 
+* {
+    box-sizing: border-box;
+}
+
 .navbar {
     background-color: $dark-4;
-}
-.navbar button{
-    color: $primary;
+
+    & button {
+        color: $primary;
+    }
+
+    & .navbar-toggler:focus {
+        outline: none;
+    }
+
+    & .btn.btn-outline-success {
+        border: 1.5px solid;
+    }
+
+    & .btn.btn-outline-success:hover {
+        background-color: $dark-1;
+    }
 }
 
 #header-container{
@@ -51,43 +69,59 @@ $body-color: $light;*/
     }
     
     & .card-body {
-        background-image: linear-gradient($gray-bg-header, $dark-3, $dark-4);
+        @include lightToDark;
     }
+}
+
+#md-header-body {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+        display: block;
+    }
+    h1, p {
+        margin-left: 0;
+        max-width: 75%;
+        color: $dark-1;
+        animation: 
+        text-appearing 2s ease-in-out;
+    }
+}
+
+@keyframes text-appearing {
+    from { opacity: 0;
+    width: 20% }
+    to { opacity: 1;
+    width: 100% }
 }
 
 #sm-header-body {
-    display: none;
 
-    @include media-breakpoint-up(sm) {
-        display: block;
+    h4{
+        color: $dark-5;
     }
-}
-
-#xs-header-body {
-    @include media-breakpoint-up(sm) {
+    
+    @include media-breakpoint-up(md) {
         display: none;
     }
-}
-
-.jumbotron {
-    background-color: $dark-3;
-    background: url("../assets/img/header-3.jpg") $dark-4;
-    background-size: cover;
-    background-blend-mode: overlay;
 }
 
 #cards-container {
     background-color: $dark-4;
 
-    .card, .card-img, .card-img-bottom {
+    .card, .card-img-bottom {
         background-color: $dark-4;
         border: none;
         border-radius: 0;
     }
+
+    .card-img-bottom {
+        height: 100%;
+    }
 }
 
 #contact-carous-container {
-    background-color: $dark-3;
+    @include darkToLight;
 
     .card, .carousel {
         border: none;
@@ -95,9 +129,42 @@ $body-color: $light;*/
     }
 
     .card {
-        background-color: $dark-3;
+        background: transparent;
+    }
+
+    .ul {
+        display: flex;
+        flex-direction: column;
+        
     }
 }
 
+#carouselExampleControls:hover {
+    cursor: pointer;
+}
+
+#carouselExampleControls {
+    min-height: 120px;
+    
+    @include media-breakpoint-up(lg) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    & img,
+    & div {
+        min-height: 120px;
+        overflow: hidden;
+    }
+
+    & .carousel-caption {
+        padding: 0;
+        bottom: 0;
+    }
+}
+
+footer .nav-link {
+    padding: 0.2rem 1rem;
+}
 
 
