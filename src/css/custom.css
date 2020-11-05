@@ -1,9 +1,3 @@
-/*$primary: #2c2c2c;
-$secondary: #abacad;
-$light: #d3d1d1;
-$dark: #373a40; 
-$body-bg: $primary;
-$body-color: $light;*/
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -7162,6 +7156,10 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+@media (max-width: 575.98px) {
+  html {
+    font-size: 15px; } }
+
 body {
   font-family: "Trispace", sans-serif; }
 
@@ -7169,6 +7167,9 @@ body {
   font-family: "Gochi Hand", cursive; }
   .navbar-brand {
     font-size: 2em; }
+    @media (max-width: 575.98px) {
+      .navbar-brand {
+        font-size: 1.7em; } }
   .navbar-nav {
     font-family: "Trispace", sans-serif;
     font-size: 1em; }
@@ -7208,6 +7209,11 @@ body {
 * {
   box-sizing: border-box; }
 
+.modal-content .modal-title,
+.modal-content label,
+.modal-content a {
+  color: #373a40; }
+
 .navbar {
   background-color: #373a40; }
   .navbar button {
@@ -7224,8 +7230,8 @@ body {
   border-radius: 0;
   background-color: #B7B7B7; }
   #header-container .card-img-top {
-    max-height: 22rem;
-    min-height: 7rem;
+    max-height: 350px;
+    min-height: 110px;
     border: none;
     border-radius: 0; }
   #header-container .card-body {
@@ -7295,4 +7301,4 @@ body {
     bottom: 0; }
 
 footer .nav-link {
-  padding: 0.2rem 1rem; }
+  padding: 3px 15px; }

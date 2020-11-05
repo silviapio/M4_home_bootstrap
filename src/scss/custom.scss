@@ -1,4 +1,5 @@
 //variable overrides
+//these variables definitions have to be placed here because I will use them to override bootstrap variables
 $dark-5: #2c2c2c;
 $dark-4: #373a40;
 $dark-3: #686d76;
@@ -9,13 +10,6 @@ $body-bg: $dark-5;
 $body-color: $dark-1;
 $primary: $body-color;
 $success: $dark-2;
-
-/*$primary: #2c2c2c;
-$secondary: #abacad;
-$light: #d3d1d1;
-$dark: #373a40; 
-$body-bg: $primary;
-$body-color: $light;*/
 
 //import Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
@@ -34,6 +28,14 @@ $body-color: $light;*/
 
 * {
     box-sizing: border-box;
+}
+
+.modal-content {
+    .modal-title,
+    label,
+    a {
+        color: $dark-4;
+    }
 }
 
 .navbar {
@@ -62,8 +64,8 @@ $body-color: $light;*/
     background-color: $gray-bg-header;
 
     & .card-img-top {
-        max-height: 22rem;
-        min-height: 7rem;
+        max-height: 350px;
+        min-height: 110px;
         border: none;
         border-radius: 0;
     }
@@ -164,7 +166,7 @@ $body-color: $light;*/
 }
 
 footer .nav-link {
-    padding: 0.2rem 1rem;
+    padding: 3px 15px;
 }
 
 

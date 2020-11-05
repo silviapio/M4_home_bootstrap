@@ -18,6 +18,36 @@
 </head>
 
 <body>
+  <!-- Modal -->
+<div class="modal fade" id="modalSignIn" tabindex="-1" role="dialog" aria-labelledby="modalSignIn" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalSignIn">SIGN IN</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="inputEmail">Email address</label>
+    <input type="email" class="form-control" id="inputEmail">
+        </div>
+        <div class="form-group">
+          <label for="inputPassword">Password</label>
+          <input type="password" class="form-control" id="inputPassword" aria-describedby="passwordHelp">
+          <small id="passwordHelp" class="form-text text-muted">
+            <a href="#">Forgot your password?</a>
+          </small>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">SIGN IN</button>
+      </div>
+    </div>
+  </div>
+</div>
   <div class="container-fluid">
     <nav class="navbar navbar-expand-md">
       <div class="container-fluid">
@@ -32,7 +62,7 @@
             <a href="#" class="nav-link">Blog</a>
             <a href="#" class="nav-link">About</a>
             <form class="form-inline">
-              <button class="btn btn-outline-success" type="button">SIGN IN</button>
+              <button class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#modalSignIn">SIGN IN</button>
             </form>
             <!--<a href="#" class="nav-link">Sign in</a> -->
           </div>

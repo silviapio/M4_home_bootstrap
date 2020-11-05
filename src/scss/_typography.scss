@@ -1,3 +1,9 @@
+html {
+    @include media-breakpoint-down(xs) { //sets the root font size a bit smaller for xs viewports
+        font-size: 15px;
+    }
+}
+
 body {
     font-family: $font-normal;
 }
@@ -7,6 +13,10 @@ body {
 
     &-brand {
         font-size: 2em;
+
+        @include media-breakpoint-down(xs) { //sets the navbar-brand font size fit for xs viewports
+            font-size: 1.7em;
+        }
     }
 
     &-nav {
