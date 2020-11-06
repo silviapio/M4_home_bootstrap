@@ -7299,6 +7299,12 @@ body {
   #carouselExampleControls .carousel-caption {
     padding: 0;
     bottom: 0; }
+    @media (max-width: 575.98px) {
+      #carouselExampleControls .carousel-caption {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center; } }
 
 footer .nav-link {
   padding: 3px 15px; }

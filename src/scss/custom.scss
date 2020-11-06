@@ -162,6 +162,13 @@ $success: $dark-2;
     & .carousel-caption {
         padding: 0;
         bottom: 0;
+
+        @include media-breakpoint-down(xs) { //fixes the carousel captions for xs viewports
+            display: flex !important;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+        }
     }
 }
 
