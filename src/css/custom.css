@@ -7246,7 +7246,16 @@ body {
     margin-left: 0;
     max-width: 75%;
     color: #d3d1d1;
+    -webkit-animation: text-appearing 2s ease-in-out;
     animation: text-appearing 2s ease-in-out; }
+
+@-webkit-keyframes text-appearing {
+  from {
+    opacity: 0;
+    width: 20%; }
+  to {
+    opacity: 1;
+    width: 100%; } }
 
 @keyframes text-appearing {
   from {
