@@ -38,6 +38,12 @@ $success: $dark-2;
     }
 }
 
+#generalContainer {
+    @include media-breakpoint-down(sm) {
+        padding: 0;
+    }
+}
+
 .navbar {
     background-color: $dark-4;
 

@@ -7214,6 +7214,10 @@ body {
 .modal-content a {
   color: #373a40; }
 
+@media (max-width: 767.98px) {
+  #generalContainer {
+    padding: 0; } }
+
 .navbar {
   background-color: #373a40; }
   .navbar button {
