@@ -1,9 +1,3 @@
-html {
-    @include media-breakpoint-down(xs) { //sets the root font size a bit smaller for xs viewports
-        font-size: 15px;
-    }
-}
-
 body {
     font-family: $font-normal;
 }
@@ -15,7 +9,7 @@ body {
         font-size: 2em;
 
         @include media-breakpoint-down(xs) { //sets the navbar-brand font size fit for xs viewports
-            font-size: 1.7em;
+            font-size: 1.8em;
         }
     }
 
@@ -29,8 +23,21 @@ body {
     }
 }
 
-#md-header-body h1 {
-    font-size: 2.5em;
+#md-header-body {
+    h1 {
+    font-size: 2em;
+
+        @include media-breakpoint-down(xs) {
+            font-size: 1.5em;
+        }
+    }
+
+    p {
+        @include media-breakpoint-down(xs) {
+            font-size: 0.85em;
+        }
+    }
+
 }
 
 #cards-container {

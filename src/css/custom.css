@@ -7156,10 +7156,6 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-@media (max-width: 575.98px) {
-  html {
-    font-size: 15px; } }
-
 body {
   font-family: "Trispace", sans-serif; }
 
@@ -7169,7 +7165,7 @@ body {
     font-size: 2em; }
     @media (max-width: 575.98px) {
       .navbar-brand {
-        font-size: 1.7em; } }
+        font-size: 1.8em; } }
   .navbar-nav {
     font-family: "Trispace", sans-serif;
     font-size: 1em; }
@@ -7177,7 +7173,14 @@ body {
     font-family: "Trispace", sans-serif; }
 
 #md-header-body h1 {
-  font-size: 2.5em; }
+  font-size: 2em; }
+  @media (max-width: 575.98px) {
+    #md-header-body h1 {
+      font-size: 1.5em; } }
+
+@media (max-width: 575.98px) {
+  #md-header-body p {
+    font-size: 0.85em; } }
 
 #cards-container h3 {
   font-family: "Gochi Hand", cursive; }
@@ -7214,10 +7217,6 @@ body {
 .modal-content a {
   color: #373a40; }
 
-@media (max-width: 767.98px) {
-  #generalContainer {
-    padding: 0; } }
-
 .navbar {
   background-color: #373a40; }
   .navbar button {
@@ -7240,12 +7239,12 @@ body {
     border-radius: 0; }
   #header-container .card-body {
     background-image: linear-gradient(#B7B7B7, #686d76, #373a40); }
+    @media (max-width: 575.98px) {
+      #header-container .card-body {
+        padding-bottom: 5px; } }
 
 #md-header-body {
   display: none; }
-  @media (min-width: 768px) {
-    #md-header-body {
-      display: block; } }
   #md-header-body h1, #md-header-body p {
     margin-left: 0;
     max-width: 75%;
@@ -7272,12 +7271,9 @@ body {
 #sm-header-body h4 {
   color: #2c2c2c; }
 
-@media (min-width: 768px) {
-  #sm-header-body {
-    display: none; } }
-
 #cards-container {
-  background-color: #373a40; }
+  background-color: #373a40;
+  padding: 15px; }
   #cards-container .card, #cards-container .card-img-bottom {
     background-color: #373a40;
     border: none;
@@ -7300,14 +7296,10 @@ body {
   cursor: pointer; }
 
 #carouselExampleControls {
-  min-height: 120px; }
-  @media (min-width: 992px) {
-    #carouselExampleControls {
-      top: 50%;
-      transform: translateY(-50%); } }
+  min-height: 180px; }
   #carouselExampleControls img,
   #carouselExampleControls div {
-    min-height: 120px;
+    min-height: 180px;
     overflow: hidden; }
   #carouselExampleControls .carousel-caption {
     padding: 0;
@@ -7321,3 +7313,33 @@ body {
 
 footer .nav-link {
   padding: 3px 15px; }
+
+@media (max-width: 575.98px) {
+  #cards-container .card {
+    padding-top: 12px;
+    padding-bottom: 3px;
+    background-image: linear-gradient(#373a40, #686d76, #B7B7B7); }
+  .carousel-caption {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; } }
+
+@media (max-width: 767.98px) {
+  #generalContainer {
+    padding: 0; } }
+
+@media (min-width: 768px) {
+  #md-header-body {
+    display: block; }
+  #sm-header-body {
+    display: none; } }
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  #cards-container .card {
+    padding-bottom: 15px; } }
+
+@media (min-width: 992px) {
+  #carouselExampleControls {
+    top: 50%;
+    transform: translateY(-50%); } }

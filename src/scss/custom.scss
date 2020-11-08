@@ -38,12 +38,6 @@ $success: $dark-2;
     }
 }
 
-#generalContainer {
-    @include media-breakpoint-down(sm) {
-        padding: 0;
-    }
-}
-
 .navbar {
     background-color: $dark-4;
 
@@ -78,15 +72,16 @@ $success: $dark-2;
     
     & .card-body {
         @include lightToDark;
+
+        @include media-breakpoint-down(xs) {
+            padding-bottom: 5px;
+        }
     }
 }
 
 #md-header-body {
     display: none;
 
-    @include media-breakpoint-up(md) {
-        display: block;
-    }
     h1, p {
         margin-left: 0;
         max-width: 75%;
@@ -113,18 +108,14 @@ $success: $dark-2;
 }
 
 #sm-header-body {
-
     h4{
         color: $dark-5;
-    }
-    
-    @include media-breakpoint-up(md) {
-        display: none;
     }
 }
 
 #cards-container {
     background-color: $dark-4;
+    padding: 15px;
 
     .card, .card-img-bottom {
         background-color: $dark-4;
@@ -161,20 +152,15 @@ $success: $dark-2;
 }
 
 #carouselExampleControls {
-    min-height: 120px;
-    
-    @include media-breakpoint-up(lg) {
-        top: 50%;
-        transform: translateY(-50%);
-    }
+    min-height: 180px;
 
-    & img,
-    & div {
-        min-height: 120px;
+    img,
+    div {
+        min-height: 180px;
         overflow: hidden;
     }
 
-    & .carousel-caption {
+    .carousel-caption {
         padding: 0;
         bottom: 0;
 
@@ -192,3 +178,54 @@ footer .nav-link {
 }
 
 
+@include media-breakpoint-down(xs) {
+    #cards-container .card {
+        //fixes padding for xs viewports, includes grandient 'darkToLight' and gives the effect of an horizontal line on bottom
+        padding-top: 12px;
+        padding-bottom: 3px;
+        @include darkToLight;
+    }
+
+    .carousel-caption {
+        //fixes the carousel captions for xs viewports
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    #generalContainer {
+        //eliminates the padding for sm and xs viewports
+        padding: 0;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    #md-header-body{
+        //needed for the animation of the header
+        display: block;
+    }
+
+    #sm-header-body{
+        //needed for the animation of the header
+        display: none;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    #cards-container .card {
+        //gives some padding between cards for sm and md viewports
+        padding-bottom: 15px;
+    }
+}
+
+
+@include media-breakpoint-up(lg) {
+    #carouselExampleControls {
+        //fixes position for the carousel
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
