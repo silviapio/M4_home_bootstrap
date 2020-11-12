@@ -7165,31 +7165,45 @@ body {
     font-size: 2em; }
     @media (max-width: 575.98px) {
       .navbar-brand {
-        font-size: 1.8em; } }
+        font-size: 1.7em; } }
   .navbar-nav {
     font-family: "Trispace", sans-serif;
     font-size: 1em; }
+  .navbar-toggler {
+    font-size: 20px; }
   .navbar .btn.btn-outline-success {
     font-family: "Trispace", sans-serif; }
+    @media (max-width: 575.98px) {
+      .navbar .btn.btn-outline-success {
+        font-size: 14px; } }
+
+@media (max-width: 310px) {
+  .navbar-brand {
+    font-size: 1.3em; } }
 
 #md-header-body h1 {
   font-size: 2em; }
-  @media (max-width: 575.98px) {
-    #md-header-body h1 {
-      font-size: 1.5em; } }
 
 @media (max-width: 575.98px) {
   #md-header-body p {
     font-size: 0.85em; } }
 
+#sm-header-body h4 {
+  font-size: 1.5em; }
+
+#sm-header-body p {
+  font-size: 0.85em; }
+
 #cards-container h3 {
-  font-family: "Gochi Hand", cursive; }
+  font-family: "Gochi Hand", cursive;
+  font-size: 1.7em; }
 
 #cards-container p {
   font-size: 0.85em; }
 
 #contact-carous-container h3 {
-  font-family: "Gochi Hand", cursive; }
+  font-family: "Gochi Hand", cursive;
+  font-size: 1.7em; }
 
 #contact-carous-container p {
   font-size: 0.85em; }
@@ -7327,9 +7341,23 @@ footer .nav-link {
 
 @media (max-width: 767.98px) {
   #generalContainer {
-    padding: 0; } }
+    padding: 0; }
+  .navbar-expand-md {
+    padding: 8px 12px; }
+    .navbar-expand-md .navbar-brand {
+      margin-right: 2px; }
+    .navbar-expand-md #signInMd {
+      display: none; }
+    .navbar-expand-md #signInSm {
+      padding: 2px 4px 2px 4px;
+      border: 1px solid #686d76; }
+    .navbar-expand-md .navbar-toggler {
+      margin-left: 4px;
+      padding: 5px 0px 2px 0px; } }
 
 @media (min-width: 768px) {
+  #signInSm {
+    display: none; }
   #md-header-body {
     display: block; }
   #sm-header-body {

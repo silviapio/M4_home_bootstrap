@@ -198,11 +198,37 @@ footer .nav-link {
 @include media-breakpoint-down(sm) {
     #generalContainer {
         //eliminates the padding for sm and xs viewports
-        padding: 0;
+        padding: 0; 
+    }
+
+    .navbar-expand-md {
+        padding: 8px 12px;
+
+        .navbar-brand {
+            margin-right: 2px;
+        }
+
+        #signInMd {
+            display: none;
+        }
+
+        #signInSm {
+            padding: 2px 4px 2px 4px;
+            border: 1px solid $dark-3; 
+        }
+
+        .navbar-toggler {
+            margin-left: 4px;
+            padding: 5px 0px 2px 0px;
+        }
     }
 }
 
 @include media-breakpoint-up(md) {
+    #signInSm {
+        display: none;
+    }
+
     #md-header-body{
         //needed for the animation of the header
         display: block;

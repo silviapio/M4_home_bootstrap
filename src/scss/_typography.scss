@@ -9,7 +9,7 @@ body {
         font-size: 2em;
 
         @include media-breakpoint-down(xs) { //sets the navbar-brand font size fit for xs viewports
-            font-size: 1.8em;
+            font-size: 1.7em;
         }
     }
 
@@ -18,18 +18,28 @@ body {
         font-size: 1em;
     }
 
+    &-toggler {
+        font-size: 20px;
+    }
+
     & .btn.btn-outline-success {
         font-family: $font-normal;
+
+        @include media-breakpoint-down(xs) {
+            font-size: 14px;
+        }        
+    }
+}
+
+@media (max-width: 310px) {
+    .navbar-brand {
+        font-size: 1.3em;
     }
 }
 
 #md-header-body {
     h1 {
     font-size: 2em;
-
-        @include media-breakpoint-down(xs) {
-            font-size: 1.5em;
-        }
     }
 
     p {
@@ -40,9 +50,20 @@ body {
 
 }
 
+#sm-header-body {
+    h4 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.85em;
+    }
+}
+
 #cards-container {
     h3 {
         font-family: $font-deco;
+        font-size: 1.7em;
     }
 
     p {
@@ -53,6 +74,7 @@ body {
 #contact-carous-container {
     h3 {
         font-family: $font-deco;
+        font-size: 1.7em;
     }
     p {
         font-size: 0.85em;
